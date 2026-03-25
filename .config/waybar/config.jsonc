@@ -1,1 +1,106 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "margin-top": 7,
+    "width": 1700,
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "hyprland/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        // "group/hardware",
+        "network",
+        "pulseaudio",
+        "custom/power"
+    ],
 
+    /// CLOCK ///
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+
+    /// AUDIO ///
+    "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "Muted ",
+    // "format-source": "{volume}% ",
+    // "format-source-muted": "",
+    "format-icons": {
+        "default": ["", "", ""]
+        },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-",
+    "max-volume": 100
+    },
+
+    /// NETWORK ///
+    "network": {
+    "interface": "enp7s0",
+    "format": "Ethernet ", // default is change ehternet to {ifname}
+    // "format-wifi": "{essid} ({signalStrength}%) ",
+    // "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "󰌙 Disconnected", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    // "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click-right": "nm-connection-editor",
+    "max-length": 50
+    },
+
+    /// WORKSPACE ///
+    "hyprland/workspaces": {
+	    "format": "{name}",
+      "persistent-workspaces": {
+             "*": 5
+      }
+    },
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    /// POWER BUTTON ///
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+
+    // /// HARDWARE INDOCATOR ///
+    // "group/hardware": {
+    //     "orientation": "horizontal",
+    //     "modules": [
+    //         "cpu",
+    //         "memory"
+    //     ]
+    // },
+
+    // "cpu": {
+    //     "format": "{usage}% ",
+    //     "interval": 7,
+    //     "tooltip": false,
+    //     "states": {
+    //         "warning": 70,
+    //         "critical": 90
+    //     }
+    // },
+
+    // "memory": {
+    //     "interval": 10,
+    //     "format": "{percentage}% ",
+    //     "states": {
+    //         "warning": 70,
+    //         "critical": 90
+    //     },
+    //     "tooltip": false
+    // }
+}
