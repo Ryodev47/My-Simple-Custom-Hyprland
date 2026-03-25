@@ -3,9 +3,6 @@ This is simple hyprland setup for daily driver. A minimal, clean, and functional
 
 ---
 
-
----
-
 ## Core Components
 * **Compositor:** [Hyprland](https://hyprland.org/) (Wayland)
 * **Status Bar:** Waybar
