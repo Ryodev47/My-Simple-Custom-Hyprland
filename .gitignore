@@ -1,0 +1,27 @@
+# --- Hyprland & Wayland Logs ---
+*.log
+hyprland.log
+wayland-*.log
+
+# --- System & OS Specific ---
+.DS_Store
+.directory
+Thumbs.db
+Desktop.ini
+
+# --- App Specific Caches ---
+# Menghindari cache shader atau thumbnail aplikasi
+.cache/
+.thumbnails/
+
+# --- Sensitive Info (PENTING) ---
+# Jika kamu menyimpan environment variables atau API keys
+.env
+auth.conf
+*secret*
+
+# --- Editor Specific ---
+.vscode/
+.idea/
+*.swp
+*~
