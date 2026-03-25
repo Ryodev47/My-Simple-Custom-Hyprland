@@ -3,14 +3,10 @@ This is simple hyprland setup for daily driver. A minimal, clean, and functional
 
 ---
 
-## 📸 Preview
-> [!TIP]
-> Add a screenshot of your setup here to make it look great!
-> `![Desktop Preview](./assets/screenshot.png)`
 
 ---
 
-## 🛠️ Core Components
+## Core Components
 * **Compositor:** [Hyprland](https://hyprland.org/) (Wayland)
 * **Status Bar:** Waybar
 * **App Launcher:** Wofi / Rofi
@@ -20,7 +16,7 @@ This is simple hyprland setup for daily driver. A minimal, clean, and functional
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone the Repository
 ```bash
