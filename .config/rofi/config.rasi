@@ -1,0 +1,179 @@
+/**
+* Rofi Full Configuration
+* Tema: Monokrom (Hitam-Putih) dengan Mode Switcher
+**/
+
+* {
+    font: "Figtree 13";
+    g-spacing: 10px;
+    g-margin: 0;
+    b-color: #000000FF;
+    fg-color: #FFFFFFFF;
+    fgp-color: #888888FF;
+    b-radius: 20px;
+    g-padding: 8px;
+    hl-color: #FFFFFFFF;
+    hlt-color: #000000FF;
+    alt-color: #111111FF;
+    wbg-color: #000000CC;
+    w-border: 1px solid;
+    w-border-color: #FFFFFFFF;
+    w-padding: 8px;
+}
+
+
+configuration {
+    /* Mengaktifkan 3 pilihan menu */
+    modi: "drun,run,window";
+    show-icons: true;
+
+    /* Icon Theme (Ganti sesuai yang terinstall di sistemmu) */
+    icon-theme: "Papirus";
+
+    /* Label untuk masing-masing mode */
+    display-drun: " Apps";
+    display-run: "  Run";
+    display-window: "󰕰 Win";
+
+    /* Format tampilan */
+    drun-display-format: "{icon} {name}";
+
+    /* 1. Hapus fungsi bawaan navigasi kursor teks agar tidak bentrok */
+    kb-move-char-back: "";
+    kb-move-char-forward: "";
+
+    /* 2. Petakan tombol Panah Kiri/Kanan untuk pindah mode */
+    kb-mode-next: "Right";
+    kb-mode-previous: "Left";
+}
+
+
+window {
+    transparency: "real";
+    width: 450px;
+    border-radius: @b-radius;
+    background-color: @wbg-color;
+    border: @w-border;
+    border-color: @w-border-color;
+    padding: @w-padding;
+}
+
+
+mainbox {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    /* Susunan: Input -> Daftar Aplikasi -> Switcher Menu */
+    children: ["inputbar", "listview", "mode-switcher"];
+}
+
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+    background-color: @alt-color;
+    border-radius: @b-radius;
+    padding: 10px 15px;
+    margin: 0 0 5px 0; /* Memberi jarak sedikit dengan listview di bawahnya */
+}
+
+
+prompt {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+
+entry {
+    background-color: transparent;
+    placeholder: "Search...";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+    vertical-align: 0.5;
+}
+
+
+listview {
+    columns: 1;
+    lines: 6;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px solid;
+    spacing: @g-spacing;
+}
+
+
+/* --- KONFIGURASI ITEM / ELEMENT --- */
+element {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    border-radius: @b-radius;
+    background-color: transparent;
+    text-color: @fg-color;
+    /* Menampilkan Ikon dan Teks */
+    children: ["element-icon", "element-text"];
+}
+
+
+element-icon {
+    size: 24px;
+    cursor: inherit;
+}
+
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+    cursor: inherit;
+}
+
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+
+element alternate.normal {
+    /*background-color: @alt-color;*/
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+
+element selected.normal {
+    background-color: @hl-color;
+    text-color: @hlt-color;
+}
+
+
+/* --- KONFIGURASI MODE SWITCHER (TABS DI BAWAH) --- */
+mode-switcher {
+    spacing: 10px;
+    background-color: transparent;
+}
+
+
+button {
+    padding: 8px;
+    border-radius: @b-radius;
+    background-color: @alt-color;
+    text-color: @fgp-color;
+    horizontal-align: 0.5;
+    cursor: pointer;
+}
+
+
+button selected {
+    background-color: @hl-color;
+    text-color: @hlt-color;
+}
+
+
+message {
+    background-color: red;
+    border: 0px solid;
+}
