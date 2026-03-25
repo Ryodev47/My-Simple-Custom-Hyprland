@@ -1,0 +1,170 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font Propo", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
+    /* obligatory */
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    /* background: rgba(0, 0, 0, 0.6); */
+    background: transparent;
+    color: white;
+    min-height: 32px;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+/* WORKSPACE BUTTON */
+#workspaces {
+    transition: all 1050ms ease-in-out;
+}
+
+#workspaces button {
+    transition: all 200ms ease-in-out;
+    padding: 0 5px;
+    margin: 0 2px;
+    background: alpha(#202020, 0.8);
+    border: 1px solid #404040;
+    border-radius: 100px;
+    color: #e8eaed;
+}
+
+#workspaces button.active {
+    min-width: 50px;
+    background-color: #e8eaed;
+    color: black;
+    border-radius: 100px;
+    border: 0px;
+}
+
+/* ROFI ARCH LAUNCHER */
+/*#custom-launcher {
+    background-color: rgba(32, 32, 32, 0.8);
+    color: #ffffff;
+    padding: 0 8px;
+    margin-left: 0px;
+    margin-right: 5px;
+    border: 1px solid #404040;
+    border-radius: 75px;
+    transition: all 0.3s ease;
+}
+
+#custom-launcher:hover {
+    background-color: #1793d1;
+    color: #ffffff;
+    border: 1px solid #1793d1;
+}*/
+/* ROFI ARCH LAUNCHER - Clean Icon Only */
+#custom-launcher {
+    font-size: 22px;
+    background-color: transparent; /* Pastikan background hilang */
+    color: #ffffff;                /* Warna ikon putih */
+    border: none;                  /* Tanpa garis tepi */
+    padding: 0 5px;               /* Beri sedikit ruang agar mudah diklik */
+    margin: 0;
+    transition: color 0.3s ease;   /* Transmisi halus saat ganti warna */
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+#custom-launcher:hover {
+    background-color: transparent; /* Tetap tanpa background saat hover */
+    color: #1793d1;                /* Berubah menjadi biru Arch Linux */
+}
+
+/* CLOCK BUTTON */
+#clock {
+    font-weight: 700;
+    background-color: rgba(32, 32, 32, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 0 15px;
+    margin: 0 2px;
+    border: 1px solid #404040;
+    border-radius: 75px;
+}
+
+
+/* CLOCK BUTTON */
+#clock {
+    font-weight: 700;
+    background-color: rgba(32, 32, 32, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 0 15px;
+    margin: 0 2px;
+    border: 1px solid #404040;
+    border-radius: 75px;
+}
+
+/* AUDIO BUTTON */
+#pulseaudio {
+    background-color: alpha(#202020, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+    margin: 0 2px;
+    border: 1px solid #404040;
+    border-radius: 75px;
+}
+
+/* NETWORK BUTTON */
+#network {
+    background-color: alpha(#202020, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+    margin: 0 2px;
+    border: 1px solid #404040;
+    border-radius: 75px;
+}
+
+/* CUSTOM/POWER BUTTON */
+#custom-power {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0 10px;
+    margin-right: 0px;
+    margin-left: 2px;
+    border: 1px solid #404040;
+    border-radius: 75px;
+    font-weight: normal;
+}
+
+#custom-power:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+/* CPU AND MEMORY USAGE
+#hardware {
+    background-color: alpha(#202020, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+    margin: 0 2px;
+    border: 1px solid #404040;
+    border-radius: 50px;
+}
+
+#cpu, #memory {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0 5px;
+}
+
+#cpu.warning, #memory.warning {
+    color: #f1c40f; 
+}
+
+#cpu.critical, #memory.critical {
+    color: #ff0000;
+    font-weight: bold;
+} */
