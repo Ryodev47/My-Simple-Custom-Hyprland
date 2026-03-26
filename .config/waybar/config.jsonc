@@ -1,5 +1,5 @@
 {
-    "layer": "bottom",
+	"layer": "bottom",
     "position": "top",
     "margin-top": 7,
     "width": 1700,
@@ -25,39 +25,39 @@
 
     /// AUDIO ///
     "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-muted": "Muted ",
-    // "format-source": "{volume}% ",
-    // "format-source-muted": "",
-    "format-icons": {
-        "default": ["", "", ""]
-        },
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+",
-    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-",
-    "max-volume": 100
+        "format": "{volume}% {icon}",
+        "format-muted": "Muted ",
+        // "format-source": "{volume}% ",
+        // "format-source-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+            },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-",
+        "max-volume": 100
     },
 
     /// NETWORK ///
     "network": {
-    "interface": "enp7s0",
-    "format": "Ethernet ", // default is change ehternet to {ifname}
-    // "format-wifi": "{essid} ({signalStrength}%) ",
-    // "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-    "format-disconnected": "󰌙 Disconnected", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    // "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "on-click-right": "nm-connection-editor",
-    "max-length": 50
+        "interface": "enp7s0",
+        "format": "Ethernet ", // default is change ehternet to {ifname}
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "󰌙 Disconnected", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        // "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click-right": "nm-connection-editor",
+        "max-length": 50
     },
 
     /// WORKSPACE ///
     "hyprland/workspaces": {
 	    "format": "{name}",
-      "persistent-workspaces": {
+        "persistent-workspaces": {
              "*": 5
       }
     },
