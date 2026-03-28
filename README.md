@@ -9,7 +9,7 @@ This is simple hyprland setup for daily driver. A minimal, clean, and functional
 * **App Launcher:** Rofi
 * **Terminal:** Kitty
 * **Notification Daemon:** Swaync
-* **Wallpaper Utility:** Hyprpaper / SWWW
+* **Wallpaper Utility:** AWWW
 
 ---
 
