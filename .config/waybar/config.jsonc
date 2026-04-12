@@ -1,7 +1,7 @@
 {
     "layer": "bottom",
     "position": "top",
-    "margin-top": 7,
+    "margin-top": 5,
     "width": 1700,
     "modules-left": [
         "custom/launcher",
@@ -41,17 +41,19 @@
 
     /// NETWORK ///
     "network": {
-        "interface": "enp7s0",
-        "format": "Ethernet ", // default is change ehternet to {ifname}
-        // "format-wifi": "{essid} ({signalStrength}%) ",
-        // "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-        "format-disconnected": "󰌙 Disconnected", //An empty format will hide the module.
-        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-        // "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-        "tooltip-format-ethernet": "{ifname} ",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click-right": "nm-connection-editor",
-        "max-length": 50
+    "interface": "enp7s0",
+    "format": "󰈀 Online",
+    "format-disconnected": "󰌙 Offline",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click-right": "nm-connection-editor",
+    
+    // Baris baru untuk toggle online/offline (Klik Tengah)
+    // "on-click-middle": "nmcli networking connectivity check && nmcli networking off || nmcli networking on",
+    // "on-click-middle": "nmcli device disconnect enp7s0 || nmcli device connect enp7s0",
+    
+    "max-length": 50
     },
 
     /// WORKSPACE ///
@@ -71,36 +73,7 @@
     /// POWER BUTTON ///
     "custom/power": {
         "format": "⏻",
-        "on-click": "wlogout",
+        "on-click": "wlogout -b 4 -c 0 -r 0 -m 400",
         "tooltip": false
     }
-
-    // /// HARDWARE INDOCATOR ///
-    // "group/hardware": {
-    //     "orientation": "horizontal",
-    //     "modules": [
-    //         "cpu",
-    //         "memory"
-    //     ]
-    // },
-
-    // "cpu": {
-    //     "format": "{usage}% ",
-    //     "interval": 7,
-    //     "tooltip": false,
-    //     "states": {
-    //         "warning": 70,
-    //         "critical": 90
-    //     }
-    // },
-
-    // "memory": {
-    //     "interval": 10,
-    //     "format": "{percentage}% ",
-    //     "states": {
-    //         "warning": 70,
-    //         "critical": 90
-    //     },
-    //     "tooltip": false
-    // }
 }
