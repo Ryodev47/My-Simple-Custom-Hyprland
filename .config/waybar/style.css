@@ -47,39 +47,21 @@ tooltip label {
     border: 0px;
 }
 
-/* ROFI ARCH LAUNCHER */
-/*#custom-launcher {
-    background-color: rgba(32, 32, 32, 0.8);
-    color: #ffffff;
-    padding: 0 8px;
-    margin-left: 0px;
-    margin-right: 5px;
-    border: 1px solid #404040;
-    border-radius: 75px;
-    transition: all 0.3s ease;
-}
-
-#custom-launcher:hover {
-    background-color: #1793d1;
-    color: #ffffff;
-    border: 1px solid #1793d1;
-}*/
-/* ROFI ARCH LAUNCHER - Clean Icon Only */
 #custom-launcher {
     font-size: 22px;
-    background-color: transparent; /* Pastikan background hilang */
-    color: #ffffff;                /* Warna ikon putih */
-    border: none;                  /* Tanpa garis tepi */
-    padding: 0 5px;               /* Beri sedikit ruang agar mudah diklik */
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0 5px;
     margin: 0;
-    transition: color 0.1s ease;   /* Transmisi halus saat ganti warna */
+    transition: color 0.1s ease;
     margin-top: -10px;
     margin-bottom: -10px;
 }
 
 #custom-launcher:hover {
-    background-color: transparent; /* Tetap tanpa background saat hover */
-    color: #1793d1;                /* Berubah menjadi biru Arch Linux */
+    background-color: transparent;
+    color: #1793d1;
 }
 
 /* CLOCK BUTTON */
@@ -151,29 +133,3 @@ tooltip label {
     border: 1px solid #404040;
     border-radius: 75px;
 }
-
-/* CPU AND MEMORY USAGE
-#hardware {
-    background-color: alpha(#202020, 0.8);
-    color: rgb(255, 255, 255);
-    padding: 0 10px;
-    margin: 0 2px;
-    border: 1px solid #404040;
-    border-radius: 50px;
-}
-
-#cpu, #memory {
-    background: transparent;
-    border: none;
-    margin: 0;
-    padding: 0 5px;
-}
-
-#cpu.warning, #memory.warning {
-    color: #f1c40f; 
-}
-
-#cpu.critical, #memory.critical {
-    color: #ff0000;
-    font-weight: bold;
-} */
