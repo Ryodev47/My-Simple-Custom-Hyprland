@@ -50,9 +50,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "on-click-right": "nm-connection-editor",
     
-    // Baris baru untuk toggle online/offline (Klik Tengah)
-    // "on-click-middle": "nmcli networking connectivity check && nmcli networking off || nmcli networking on",
-    // "on-click-middle": "nmcli device disconnect enp7s0 || nmcli device connect enp7s0",
+    // "on-click-middle": nmcli networking off || nmcli networking on",
     
     "max-length": 50
     },
