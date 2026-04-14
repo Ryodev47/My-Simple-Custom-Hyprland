@@ -72,7 +72,7 @@ tooltip label {
     border: none;                  /* Tanpa garis tepi */
     padding: 0 5px;               /* Beri sedikit ruang agar mudah diklik */
     margin: 0;
-    transition: color 0.3s ease;   /* Transmisi halus saat ganti warna */
+    transition: color 0.1s ease;   /* Transmisi halus saat ganti warna */
     margin-top: -10px;
     margin-bottom: -10px;
 }
@@ -141,6 +141,15 @@ tooltip label {
     background-color: #000000;
     color: #ffffff;
     transition: all 0.2s ease-in-out;
+}
+
+#custom-notification {
+    background-color: alpha(#202020, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 0 12px;
+    margin: 0 2px;
+    border: 1px solid #404040;
+    border-radius: 75px;
 }
 
 /* CPU AND MEMORY USAGE
