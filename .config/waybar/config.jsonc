@@ -15,6 +15,7 @@
         // "group/hardware",
         "network",
         "pulseaudio",
+        "custom/notification",
         "custom/power"
     ],
 
@@ -25,8 +26,8 @@
 
     /// AUDIO ///
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "Muted ",
+        "format": "{icon} {volume}",
+        "format-muted": " Muted",
         // "format-source": "{volume}% ",
         // "format-source-muted": "",
         "format-icons": {
@@ -75,5 +76,27 @@
         "format": "⏻",
         "on-click": "wlogout -b 4 -c 0 -r 0 -m 400",
         "tooltip": false
+    },
+
+    /// NOTIFICATION (SwayNC) ///
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
     }
 }
